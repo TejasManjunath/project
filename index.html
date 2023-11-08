@@ -1,0 +1,165 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <link rel="stylesheet" href="EXPERIMENT9CSS.css" />
+    <title>W3B51T3</title>
+</head>
+<body>
+    <div class="header">
+        <nav>
+            <h2>logo</h2>
+           <!-- <img src="images/logo.png" class="logo">-->
+            <ul>
+            <li><a href="">HOME</a></li>
+            <li><a href="">ABOUT</a></li>
+            <li><a href="">Portfolio</a></li>
+            <li><a href="">contact us</a></li>
+            </ul>
+            <img src="images/menu.png" class="menu-icon">
+        </nav>
+
+        <div class="text-box">
+            <h1><span class="auto-input"></span>Password Generator</h1>
+            <p >Generate your Password Below </p>
+            <!--
+            <a href="">Contact Me</a>
+            <a href="" class="btn">Contact Me</a>-->
+        </div>
+        
+
+    
+
+        <div class="container">
+            <div class="tab-container">
+              <div class="tab-filter-container">
+                <li class="filter-btn active" data-tab="custompswd">
+                  <ion-icon name="desktop-outline"></ion-icon>
+                  Custom Password
+                </li>
+                <li class="filter-btn" data-tab="memopswd">
+                <ion-icon name="logo-nodejs"></ion-icon>
+                  MEMORABLE Password
+                </li>
+                
+                
+              </div>
+      
+      
+              <div class="tab-filter-item-container">
+                <div class="tab-item custompswd select_tab">
+                  <div class="tab-content-right">
+                    <h1 class="tab-heading">Custom Password</h1>
+      
+                    <div class="options">
+                      <div class="slidecontainer"> 
+                          <label for="length">Password Length:</label><br>
+                          <input type="number"  id="length"  value="" min="1" max="50" onchange="setSlider(this)" />
+                          <input type="range" min="1" max="50" oninput="myFunction(this)"
+                          value="8" class="slider" id="myRange"/> 
+                           
+                      </div> 
+                      <!--
+                      <input type="number" id="lengthex" min="6" max="50" value="12">-->
+                      <br>
+                      <input type="checkbox" id="uppercase" checked>
+                      <label for="uppercase">Include Uppercase Letters</label>
+                      <br>
+                      <input type="checkbox" id="lowercase" checked>
+                      <label for="Lowercase">Include LowerCase Letters</label>
+                      <br>
+                      <input type="checkbox" id="numbers" checked>
+                      <label for="numbers">Include Numbers</label>
+                      <br>
+                      <input type="checkbox" id="symbols" checked>
+                      <label for="symbols">Include Symbols</label>
+                      <br>
+                      <div class="gene" >
+                      <button id="generate"><img src="./generate.png"> Generate Password</button>
+                      </div> 
+                  </div>
+                  <div class="display" >
+                      <input type="text" id="password" placeholder="Password" value="" size="50">
+                      <img src="./copy.png" onclick="copyPassword()" >
+                  </div>
+                    
+                    
+                  </div>
+                </div>
+      
+      
+                <div class="tab-item memopswd">
+                  <div class="tab-content-left">
+                    <h1 class="tab-heading">Memorable Password Generator</h1>
+                    
+                      <p>Click the button to generate a memorable password:</p>
+                      <div class="gene">
+                          <button id="generateButton"><img src="./generate.png"> Generate Password</button>
+                      </div>
+                      
+                      <div class="display">
+                      <input type="text" id="passwordBox" placeholder="Generated Password" size="50">
+                      <img src="./copy.png" onclick="copyPassword2()">
+          
+                      
+                      </div> 
+                  </div>
+                  <!--
+                  <div class="tab-content-right">
+                    <img
+                      src="images/web-development.jpg"
+                      alt="web development"
+                      class="tab-img"
+                    />
+                  </div>-->
+                </div>
+      
+      
+                <div class="tab-item readpswd">
+                  <div class="tab-content-left">
+                    
+                  </div>
+                  <div class="tab-content-right">
+                    <h1 class="tab-heading">Pending code</h1>
+                    <p class="paragraph">
+                      
+                    </p>
+                    <a href="#!" class="btn-primary">Read More</a>
+                  </div>
+                </div>
+      
+      
+                
+              </div>
+            </div>
+          </div>
+          
+          <script
+            type="module"
+            src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+          ></script>
+          <script
+            nomodule
+            src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+          ></script>
+          <script src="./EXPERIMENT9JS.js"></script>
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+    <script>
+        var typed = new Typed(".auto-input",{
+            strings: ["Custom" , "Memorable"],
+            typeSpeed: 100,
+            backSpeed:60,
+            loop:true
+        })
+    </script>
+    <footer>
+        <p>&copy; 2023 W3B51T3</p>
+    </footer>
+</body>
+</html>
